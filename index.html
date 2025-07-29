@@ -5,34 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ravi Kumar Panchal | Cloud DevOps Engineer</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      animation: gradientBG 15s ease infinite;
-      background: linear-gradient(-45deg, #c2e9fb, #a1c4fd, #cfd9df, #d4fc79);
-      background-size: 400% 400%;
-      min-height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 60px 0;
+      min-height: 100vh;
     }
 
     .container {
       max-width: 960px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.92);
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
       padding: 40px 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       animation: fadeIn 1s ease-in;
     }
 
@@ -45,35 +40,34 @@
       width: 160px;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
-    h1 {
-      margin-top: 0;
-      color: #2c3e50;
+    h1, h2, h3, p, li, a {
+      color: #ffffff;
     }
 
     h2 {
       margin-top: 40px;
-      color: #2980b9;
-      border-bottom: 2px solid #eee;
+      color: #1abc9c;
+      border-bottom: 1px solid #555;
       display: inline-block;
       padding-bottom: 5px;
     }
 
     a {
-      color: #3498db;
+      color: #00bcd4;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #1d6fa5;
+      color: #76e8ff;
     }
 
     .btn {
       display: inline-block;
-      background-color: #2980b9;
+      background-color: #1abc9c;
       color: white;
       padding: 10px 20px;
       border-radius: 25px;
@@ -83,7 +77,7 @@
     }
 
     .btn:hover {
-      background-color: #1d6fa5;
+      background-color: #16a085;
     }
 
     ul {
@@ -99,82 +93,81 @@
     .footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #777;
+      color: #aaa;
       text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
-    <h1>Ravi Kumar Panchal</h1>
-    <p><strong>Cloud DevOps Engineer | GCP Expert | Infrastructure Automation</strong></p>
-    <p>📍 Ujjain, Madhya Pradesh, India | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-9926786407</p>
+  <div class="overlay">
+    <div class="container">
+      <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
+      <h1>Ravi Kumar Panchal</h1>
+      <p><strong>Cloud DevOps Engineer | GCP Expert | Infrastructure Automation</strong></p>
+      <p>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-9926786407</p>
 
-    <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
+      <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I am an experienced and results-driven Cloud DevOps Engineer with over 3 years of expertise in designing,
-        implementing, and managing scalable, secure, and cost-effective solutions on Google Cloud Platform (GCP).
-        Passionate about automation, CI/CD, infrastructure as code, and security best practices.
-      </p>
-    </div>
+      <div class="section">
+        <h2>About Me</h2>
+        <p>
+          I am an experienced and results-driven Cloud DevOps Engineer with over 3 years of expertise in designing,
+          implementing, and managing scalable, secure, and cost-effective solutions on Google Cloud Platform (GCP).
+          Passionate about automation, CI/CD, infrastructure as code, and security best practices.
+        </p>
+      </div>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>☁️ Cloud Platforms: Google Cloud (GCP)</li>
-        <li>🧱 IaC: Terraform</li>
-        <li>🐳 Containerization: Docker, Kubernetes</li>
-        <li>🔄 CI/CD: Jenkins, GitHub Actions</li>
-        <li>🔐 Security: IAM, Firewalls, OS hardening</li>
-        <li>📡 Networking: VPC, VPN, Load Balancing</li>
-        <li>🧠 Monitoring: Stackdriver (Cloud Monitoring)</li>
-        <li>📜 Scripting: Bash</li>
-        <li>🔧 Tools: Git, Ansible</li>
-        <li>🤝 Collaboration: Excellent communication & teamwork</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>☁️ Google Cloud Platform (GCP)</li>
+          <li>🧱 Terraform, Ansible</li>
+          <li>🐳 Docker, Kubernetes</li>
+          <li>🔄 Jenkins, GitHub Actions</li>
+          <li>📡 VPC, VPN, IAM, Firewalls</li>
+          <li>🧠 Stackdriver Monitoring</li>
+          <li>📜 Bash Scripting</li>
+          <li>🔧 Git, CI/CD Automation</li>
+        </ul>
+      </div>
 
-    <div class="section">
-      <h2>Experience</h2>
-      <h3>Searce Inc. | Cloud DevOps Engineer | Apr 2022 – Present</h3>
-      <ul>
-        <li>Architected GCP solutions using Compute Engine, GKE, Cloud Run</li>
-        <li>Automated infrastructure with Terraform (50% deployment time reduction)</li>
-        <li>Built Jenkins CI/CD pipelines for Kubernetes deployments</li>
-        <li>Implemented VPCs, firewalls, VPNs, and tagging strategies</li>
-        <li>Setup monitoring, alerting, and cost optimization tools on GCP</li>
-      </ul>
+      <div class="section">
+        <h2>Experience</h2>
+        <h3>Searce Inc. | Cloud DevOps Engineer | Apr 2022 – Present</h3>
+        <ul>
+          <li>Architected GCP solutions using Compute Engine, GKE, Cloud Run</li>
+          <li>Automated infrastructure with Terraform (50% deployment time reduction)</li>
+          <li>Built Jenkins CI/CD pipelines for Kubernetes deployments</li>
+          <li>Implemented VPCs, firewalls, VPNs, and tagging strategies</li>
+          <li>Setup monitoring, alerting, and cost optimization tools on GCP</li>
+        </ul>
 
-      <h3>xIoTz Private Limited | DevOps Intern | Feb 2022 – Apr 2022</h3>
-      <ul>
-        <li>Automated AWS OS deployments using Ansible</li>
-        <li>Performed vulnerability scans and implemented security scripts</li>
-        <li>Worked on OS hardening for secure environments</li>
-      </ul>
-    </div>
+        <h3>xIoTz Private Limited | DevOps Intern | Feb 2022 – Apr 2022</h3>
+        <ul>
+          <li>Automated AWS OS deployments using Ansible</li>
+          <li>Performed vulnerability scans and implemented security scripts</li>
+          <li>Worked on OS hardening for secure environments</li>
+        </ul>
+      </div>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p>Bachelor of Technology (B.Tech), Computer Science  
-      <br>Lakshmi Narain College of Technology (2018 – 2022)</p>
-    </div>
+      <div class="section">
+        <h2>Education</h2>
+        <p>B.Tech in Computer Science, Lakshmi Narain College of Technology (2018 – 2022)</p>
+      </div>
 
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>✅ Google Cloud Certified Associate Cloud Engineer</li>
-        <li>✅ Google Cloud Certified Professional Cloud DevOps Engineer</li>
-        <li>✅ Google Cloud Certified Professional Cloud Security Engineer</li>
-        <li>✅ Google Cloud Certified Professional Cloud Architect</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>🎓 GCP Associate Cloud Engineer</li>
+          <li>🎓 GCP Professional Cloud DevOps Engineer</li>
+          <li>🎓 GCP Professional Cloud Security Engineer</li>
+          <li>🎓 GCP Professional Cloud Architect</li>
+        </ul>
+      </div>
 
-    <div class="footer">
-      © 2025 Ravi Kumar Panchal | Built with 💻 GitHub Pages
+      <div class="footer">
+        © 2025 Ravi Kumar Panchal | Built with 💻 GitHub Pages
+      </div>
     </div>
   </div>
 </body>
