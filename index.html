@@ -3,74 +3,223 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ravi Kumar Panchal | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --highlight: #2980b9;
+      --button-bg: #2980b9;
+      --button-text: #fff;
+    }.dark-theme {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --highlight: #1abc9c;
+  --button-bg: #1abc9c;
+  --button-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #000 url('https://i.gifer.com/ZZ5H.gif') no-repeat center center;
+  z-index: 9999;
+}
+
+.container {
+  max-width: 960px;
+  margin: 60px auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.profile {
+  width: 160px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, p, li, a {
+  color: var(--text);
+}
+
+h1 {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: -10px;
+}
+
+.contact, .language-toggle {
+  text-align: center;
+  margin: 5px 0;
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #76e8ff;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #16a085;
+}
+
+section {
+  margin-top: 40px;
+}
+
+.skills li::after {
+  content: ''; display: block; height: 8px; background: var(--highlight); border-radius: 4px;
+  width: 0%; animation: loadSkill 2s forwards;
+}
+
+.skills li:nth-child(1)::after { width: 95%; }
+.skills li:nth-child(2)::after { width: 90%; }
+.skills li:nth-child(3)::after { width: 90%; }
+.skills li:nth-child(4)::after { width: 85%; }
+.skills li:nth-child(5)::after { width: 80%; }
+.skills li:nth-child(6)::after { width: 85%; }
+.skills li:nth-child(7)::after { width: 90%; }
+.skills li:nth-child(8)::after { width: 88%; }
+.skills li:nth-child(9)::after { width: 92%; }
+
+@keyframes loadSkill {
+  to { width: 100%; }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #ccc;
+}
+
+.theme-toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--highlight);
+  color: var(--highlight);
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--highlight);
+  color: var(--button-text);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+  </style>
 </head>
-<body>
+<body onload="document.getElementById('preloader').style.display='none'">
+  <div id="preloader"></div>
   <div class="theme-toggle-container">
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  </div>  <div class="container">
-    <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
-    <h1>Ravi Kumar Panchal</h1>
-    <p class="title">Cloud DevOps Engineer | GCP Certified | Infrastructure Automation</p>
-    <p class="contact">📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</p>
-    <p class="contact">🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank">LinkedIn Profile</a></p>
-    <a href="resume.pdf" target="_blank" class="btn">📄 Download Resume</a><section>
-  <h2>Professional Summary</h2>
-  <p>Experienced and results-driven Cloud DevOps Engineer with over 3+ years of expertise in designing, implementing, and managing scalable, secure, and cost-effective cloud solutions on Google Cloud Platform (GCP). Proficient in leveraging GCP services for infrastructure optimization and cloud automation. Adept at DevOps practices and collaborating with cross-functional teams to deliver high-quality, cloud-native applications with operational excellence.</p>
+  </div>
+  <div class="language-toggle">
+    <select onchange="changeLang(this.value)">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+    </select>
+  </div>  <div class="container" id="content">
+    <!-- PROFILE INFO AND SECTIONS HERE (Already present) --><section>
+  <h2>GitHub Projects</h2>
+  <div class="project-grid" id="github-projects">Loading projects...</div>
 </section>
 
 <section>
-  <h2>Skills</h2>
-  <ul class="skills">
-    <li>☁️ Google Cloud Platform (GCP): Compute Engine, Kubernetes Engine, Cloud Run</li>
-    <li>🧱 Infrastructure as Code: Terraform, Ansible</li>
-    <li>🐳 Containerization & Orchestration: Docker, Kubernetes</li>
-    <li>🔄 CI/CD: Jenkins, GitHub Actions</li>
-    <li>📡 Networking & Security: VPC, VPN, IAM, Firewall Rules</li>
-    <li>📊 Monitoring: GCP Operations Suite (Stackdriver)</li>
-    <li>📜 Scripting: Bash, Shell</li>
-    <li>🔧 Tools: Git, OS Hardening, Compliance, Cost Optimization</li>
-    <li>🤝 Soft Skills: Communication, Documentation, Cross-functional collaboration</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Experience</h2>
-
-  <h3>Searce Inc. — Cloud DevOps Engineer</h3>
-  <p><em>April 2022 – Present</em></p>
-  <ul>
-    <li>Designed and implemented scalable cloud architectures using GCP services including Compute Engine, Kubernetes Engine, and Cloud Run.</li>
-    <li>Automated infrastructure provisioning and deployment with Terraform, reducing deployment time by 50% and improving consistency.</li>
-    <li>Orchestrated containerized workloads using Kubernetes and set up CI/CD pipelines with Jenkins and GitHub Actions for automated builds, tests, and deployments.</li>
-    <li>Implemented secure networking solutions with VPCs, firewalls, and VPNs to ensure reliable communication between services.</li>
-    <li>Configured monitoring, alerting, and log management using GCP Stackdriver for proactive issue detection and response.</li>
-    <li>Collaborated with finance and operations teams to manage and optimize cloud resource usage and costs.</li>
-    <li>Maintained thorough documentation for architecture, deployments, and operational runbooks to ensure knowledge transfer and support continuity.</li>
-  </ul>
-
-  <h3>xIoTz Pvt Ltd — DevOps Engineer Intern</h3>
-  <p><em>Feb 2022 – Apr 2022</em></p>
-  <ul>
-    <li>Deployed and managed cloud-based operating systems on AWS using Ansible automation.</li>
-    <li>Performed vulnerability assessments with custom scripts, identifying and remediating security risks.</li>
-    <li>Created OS hardening scripts to improve baseline security and ensure compliance.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <p>Bachelor of Technology in Computer Science<br> Lakshmi Narain College of Technology, Bhopal (2018 – 2022)</p>
-</section>
-
-<section>
-  <h2>Certifications</h2>
-  <ul class="certifications">
-    <li>🎓 Google Cloud Certified Associate Cloud Engineer</li>
-    <li>🎓 Google Cloud Certified Professional Cloud DevOps Engineer</li>
-    <li>🎓 Google Cloud Certified Professional Cloud Security Engineer</li>
-    <li>🎓 Google Cloud Certified Professional Cloud Architect</li>
-  </ul>
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mqkrjyoq" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
 </section>
 
 <footer>
@@ -81,5 +230,32 @@
     function toggleTheme() {
       document.documentElement.classList.toggle("dark-theme");
     }
+
+    function changeLang(lang) {
+      const content = document.getElementById('content');
+      if (lang === 'hi') {
+        content.querySelector('h2').innerText = 'व्यावसायिक सारांश';
+      } else {
+        location.reload();
+      }
+    }
+
+    // GitHub projects fetcher
+    fetch("https://api.github.com/users/ravikumarpanchal/repos")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("github-projects");
+        container.innerHTML = "";
+        data.slice(0, 6).forEach(repo => {
+          const card = document.createElement("div");
+          card.className = "project-card";
+          card.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description"}</p>
+            <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+          `;
+          container.appendChild(card);
+        });
+      });
   </script></body>
 </html>
