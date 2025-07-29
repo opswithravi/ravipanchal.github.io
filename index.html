@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ravi Kumar Panchal | Cloud DevOps Engineer</title>
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --highlight: #2980b9;
+      --button-bg: #2980b9;
+      --button-text: #fff;
+    }
+
+    [data-theme='dark'] {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --highlight: #1abc9c;
+      --button-bg: #1abc9c;
+      --button-text: #fff;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
       background-size: cover;
       background-attachment: fixed;
-      color: #fff;
+      color: var(--text);
+      transition: background 0.5s ease, color 0.5s ease;
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.7);
       padding: 60px 0;
       min-height: 100vh;
     }
@@ -23,8 +42,8 @@
     .container {
       max-width: 960px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
       padding: 40px 30px;
       border-radius: 16px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -44,19 +63,19 @@
     }
 
     h1, h2, h3, p, li, a {
-      color: #ffffff;
+      color: var(--text);
     }
 
     h2 {
       margin-top: 40px;
-      color: #1abc9c;
-      border-bottom: 1px solid #555;
+      color: var(--highlight);
+      border-bottom: 1px solid #999;
       display: inline-block;
       padding-bottom: 5px;
     }
 
     a {
-      color: #00bcd4;
+      color: var(--highlight);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -67,8 +86,8 @@
 
     .btn {
       display: inline-block;
-      background-color: #1abc9c;
-      color: white;
+      background-color: var(--button-bg);
+      color: var(--button-text);
       padding: 10px 20px;
       border-radius: 25px;
       margin-top: 15px;
@@ -93,18 +112,38 @@
     .footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #aaa;
       text-align: center;
+      color: #bbb;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: none;
+      border: 2px solid var(--highlight);
+      color: var(--highlight);
+      padding: 5px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--highlight);
+      color: var(--button-text);
     }
   </style>
 </head>
 <body>
   <div class="overlay">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <div class="container">
       <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
       <h1>Ravi Kumar Panchal</h1>
       <p><strong>Cloud DevOps Engineer | GCP Expert | Infrastructure Automation</strong></p>
-      <p>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-9926786407</p>
+      <p>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</p>
+      <p>🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank">LinkedIn Profile</a></p>
 
       <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 
@@ -170,5 +209,13 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+    }
+  </script>
 </body>
 </html>
