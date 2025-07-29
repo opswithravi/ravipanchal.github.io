@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ravi Kumar Panchal | Cloud DevOps Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
     :root {
       --bg: #ffffff;
@@ -92,11 +94,12 @@
       border-radius: 25px;
       margin-top: 15px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .btn:hover {
       background-color: #16a085;
+      transform: scale(1.05);
     }
 
     ul {
@@ -133,6 +136,17 @@
       background-color: var(--highlight);
       color: var(--button-text);
     }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -140,14 +154,25 @@
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <div class="container">
       <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
-      <h1>Ravi Kumar Panchal</h1>
-      <p><strong>Cloud DevOps Engineer | GCP Expert | Infrastructure Automation</strong></p>
-      <p>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</p>
-      <p>🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank">LinkedIn Profile</a></p>
+      <h1><span id="typed"></span></h1>
+      <script>
+        new Typed('#typed', {
+          strings: ["Ravi Kumar Panchal", "Cloud DevOps Engineer", "GCP Certified Professional"],
+          typeSpeed: 70,
+          backSpeed: 40,
+          loop: true
+        });
+      </script>
+      <p><strong>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</strong></p>
+      <p>
+        🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+        <a href="https://github.com/ravipanchal-dev" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+        <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      </p>
 
       <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 
-      <div class="section">
+      <div class="section reveal">
         <h2>About Me</h2>
         <p>
           I am an experienced and results-driven Cloud DevOps Engineer with over 3 years of expertise in designing,
@@ -156,7 +181,7 @@
         </p>
       </div>
 
-      <div class="section">
+      <div class="section reveal">
         <h2>Skills</h2>
         <ul>
           <li>☁️ Google Cloud Platform (GCP)</li>
@@ -170,7 +195,7 @@
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section reveal">
         <h2>Experience</h2>
         <h3>Searce Inc. | Cloud DevOps Engineer | Apr 2022 – Present</h3>
         <ul>
@@ -189,12 +214,21 @@
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section reveal">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>🔧 GCP Infra Provisioner:</strong> Automated multi-environment GCP setup using Terraform and CI/CD pipelines. <a href="#">View on GitHub</a></li>
+          <li><strong>📦 Kubernetes Monitoring Setup:</strong> Built Prometheus + Grafana dashboards on GKE. <a href="#">View</a></li>
+          <li><strong>⚙️ AI Playbook Generator:</strong> NLP app to generate and analyze Ansible playbooks on GCP Cloud Run. <a href="#">View</a></li>
+        </ul>
+      </div>
+
+      <div class="section reveal">
         <h2>Education</h2>
         <p>B.Tech in Computer Science, Lakshmi Narain College of Technology (2018 – 2022)</p>
       </div>
 
-      <div class="section">
+      <div class="section reveal">
         <h2>Certifications</h2>
         <ul>
           <li>🎓 GCP Associate Cloud Engineer</li>
@@ -216,6 +250,14 @@
       const currentTheme = html.getAttribute("data-theme");
       html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
     }
+
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll('.reveal').forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) el.classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
