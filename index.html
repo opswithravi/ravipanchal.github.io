@@ -1,221 +1,85 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ravi Kumar Panchal | Cloud DevOps Engineer</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --card-bg: rgba(255, 255, 255, 0.85);
-      --highlight: #2980b9;
-      --button-bg: #2980b9;
-      --button-text: #fff;
-    }
-
-    [data-theme='dark'] {
-      --bg: #121212;
-      --text: #f5f5f5;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --highlight: #1abc9c;
-      --button-bg: #1abc9c;
-      --button-text: #fff;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      background-size: cover;
-      background-attachment: fixed;
-      color: var(--text);
-      transition: background 0.5s ease, color 0.5s ease;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 60px 0;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    img.profile {
-      width: 160px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    }
-
-    h1, h2, h3, p, li, a {
-      color: var(--text);
-    }
-
-    h2 {
-      margin-top: 40px;
-      color: var(--highlight);
-      border-bottom: 1px solid #999;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    a {
-      color: var(--highlight);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #76e8ff;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      padding: 10px 20px;
-      border-radius: 25px;
-      margin-top: 15px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #16a085;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      line-height: 1.8;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      text-align: center;
-      color: #bbb;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      background: none;
-      border: 2px solid var(--highlight);
-      color: var(--highlight);
-      padding: 5px 10px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      background-color: var(--highlight);
-      color: var(--button-text);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi Kumar Panchal | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="overlay">
+  <div class="theme-toggle-container">
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-    <div class="container">
-      <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
-      <h1>Ravi Kumar Panchal</h1>
-      <p><strong>Cloud DevOps Engineer | GCP Expert | Infrastructure Automation</strong></p>
-      <p>📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</p>
-      <p>🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank">LinkedIn Profile</a></p>
+  </div>  <div class="container">
+    <img src="ravi.jpg" alt="Ravi Panchal" class="profile">
+    <h1>Ravi Kumar Panchal</h1>
+    <p class="title">Cloud DevOps Engineer | GCP Certified | Infrastructure Automation</p>
+    <p class="contact">📍 Ujjain, Madhya Pradesh | 📧 <a href="mailto:panchalravi756@gmail.com">panchalravi756@gmail.com</a> | 📞 +91-638737827</p>
+    <p class="contact">🔗 <a href="https://www.linkedin.com/in/ravikumarpanchal/" target="_blank">LinkedIn Profile</a></p>
+    <a href="resume.pdf" target="_blank" class="btn">📄 Download Resume</a><section>
+  <h2>Professional Summary</h2>
+  <p>Experienced and results-driven Cloud DevOps Engineer with over 3+ years of expertise in designing, implementing, and managing scalable, secure, and cost-effective cloud solutions on Google Cloud Platform (GCP). Proficient in leveraging GCP services for infrastructure optimization and cloud automation. Adept at DevOps practices and collaborating with cross-functional teams to deliver high-quality, cloud-native applications with operational excellence.</p>
+</section>
 
-      <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
+<section>
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>☁️ Google Cloud Platform (GCP): Compute Engine, Kubernetes Engine, Cloud Run</li>
+    <li>🧱 Infrastructure as Code: Terraform, Ansible</li>
+    <li>🐳 Containerization & Orchestration: Docker, Kubernetes</li>
+    <li>🔄 CI/CD: Jenkins, GitHub Actions</li>
+    <li>📡 Networking & Security: VPC, VPN, IAM, Firewall Rules</li>
+    <li>📊 Monitoring: GCP Operations Suite (Stackdriver)</li>
+    <li>📜 Scripting: Bash, Shell</li>
+    <li>🔧 Tools: Git, OS Hardening, Compliance, Cost Optimization</li>
+    <li>🤝 Soft Skills: Communication, Documentation, Cross-functional collaboration</li>
+  </ul>
+</section>
 
-      <div class="section">
-        <h2>About Me</h2>
-        <p>
-          I am an experienced and results-driven Cloud DevOps Engineer with over 3 years of expertise in designing,
-          implementing, and managing scalable, secure, and cost-effective solutions on Google Cloud Platform (GCP).
-          Passionate about automation, CI/CD, infrastructure as code, and security best practices.
-        </p>
-      </div>
+<section>
+  <h2>Experience</h2>
 
-      <div class="section">
-        <h2>Skills</h2>
-        <ul>
-          <li>☁️ Google Cloud Platform (GCP)</li>
-          <li>🧱 Terraform, Ansible</li>
-          <li>🐳 Docker, Kubernetes</li>
-          <li>🔄 Jenkins, GitHub Actions</li>
-          <li>📡 VPC, VPN, IAM, Firewalls</li>
-          <li>🧠 Stackdriver Monitoring</li>
-          <li>📜 Bash Scripting</li>
-          <li>🔧 Git, CI/CD Automation</li>
-        </ul>
-      </div>
+  <h3>Searce Inc. — Cloud DevOps Engineer</h3>
+  <p><em>April 2022 – Present</em></p>
+  <ul>
+    <li>Designed and implemented scalable cloud architectures using GCP services including Compute Engine, Kubernetes Engine, and Cloud Run.</li>
+    <li>Automated infrastructure provisioning and deployment with Terraform, reducing deployment time by 50% and improving consistency.</li>
+    <li>Orchestrated containerized workloads using Kubernetes and set up CI/CD pipelines with Jenkins and GitHub Actions for automated builds, tests, and deployments.</li>
+    <li>Implemented secure networking solutions with VPCs, firewalls, and VPNs to ensure reliable communication between services.</li>
+    <li>Configured monitoring, alerting, and log management using GCP Stackdriver for proactive issue detection and response.</li>
+    <li>Collaborated with finance and operations teams to manage and optimize cloud resource usage and costs.</li>
+    <li>Maintained thorough documentation for architecture, deployments, and operational runbooks to ensure knowledge transfer and support continuity.</li>
+  </ul>
 
-      <div class="section">
-        <h2>Experience</h2>
-        <h3>Searce Inc. | Cloud DevOps Engineer | Apr 2022 – Present</h3>
-        <ul>
-          <li>Architected GCP solutions using Compute Engine, GKE, Cloud Run</li>
-          <li>Automated infrastructure with Terraform (50% deployment time reduction)</li>
-          <li>Built Jenkins CI/CD pipelines for Kubernetes deployments</li>
-          <li>Implemented VPCs, firewalls, VPNs, and tagging strategies</li>
-          <li>Setup monitoring, alerting, and cost optimization tools on GCP</li>
-        </ul>
+  <h3>xIoTz Pvt Ltd — DevOps Engineer Intern</h3>
+  <p><em>Feb 2022 – Apr 2022</em></p>
+  <ul>
+    <li>Deployed and managed cloud-based operating systems on AWS using Ansible automation.</li>
+    <li>Performed vulnerability assessments with custom scripts, identifying and remediating security risks.</li>
+    <li>Created OS hardening scripts to improve baseline security and ensure compliance.</li>
+  </ul>
+</section>
 
-        <h3>xIoTz Private Limited | DevOps Intern | Feb 2022 – Apr 2022</h3>
-        <ul>
-          <li>Automated AWS OS deployments using Ansible</li>
-          <li>Performed vulnerability scans and implemented security scripts</li>
-          <li>Worked on OS hardening for secure environments</li>
-        </ul>
-      </div>
+<section>
+  <h2>Education</h2>
+  <p>Bachelor of Technology in Computer Science<br> Lakshmi Narain College of Technology, Bhopal (2018 – 2022)</p>
+</section>
 
-      <div class="section">
-        <h2>Education</h2>
-        <p>B.Tech in Computer Science, Lakshmi Narain College of Technology (2018 – 2022)</p>
-      </div>
+<section>
+  <h2>Certifications</h2>
+  <ul class="certifications">
+    <li>🎓 Google Cloud Certified Associate Cloud Engineer</li>
+    <li>🎓 Google Cloud Certified Professional Cloud DevOps Engineer</li>
+    <li>🎓 Google Cloud Certified Professional Cloud Security Engineer</li>
+    <li>🎓 Google Cloud Certified Professional Cloud Architect</li>
+  </ul>
+</section>
 
-      <div class="section">
-        <h2>Certifications</h2>
-        <ul>
-          <li>🎓 GCP Associate Cloud Engineer</li>
-          <li>🎓 GCP Professional Cloud DevOps Engineer</li>
-          <li>🎓 GCP Professional Cloud Security Engineer</li>
-          <li>🎓 GCP Professional Cloud Architect</li>
-        </ul>
-      </div>
+<footer>
+  <p>© 2025 Ravi Kumar Panchal | Portfolio Powered by GitHub Pages</p>
+</footer>
 
-      <div class="footer">
-        © 2025 Ravi Kumar Panchal | Built with 💻 GitHub Pages
-      </div>
-    </div>
-  </div>
-
-  <script>
+  </div>  <script>
     function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute("data-theme");
-      html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+      document.documentElement.classList.toggle("dark-theme");
     }
-  </script>
-</body>
+  </script></body>
 </html>
